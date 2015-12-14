@@ -220,7 +220,7 @@ namespace PdfiumViewer
             NativeMethods.FPDF_BookmarkGetTitle(bookmark, buffer, length);
 
             string result = Encoding.Unicode.GetString(buffer);
-            return result.Substring(0, result.Length - 1);
+            return result;//result.Substring(0, result.Length - 1);
         }
 
         private uint GetBookmarkPageIndex(IntPtr bookmark)
